@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin-block-start: var(--metric-box-spacing);
+}
+
+header,footer {
+    text-align: center;
+}
+
+
+header {
+    padding: var(--metric-box-spacing);
+    background-color: rgba(107, 201, 133, 1);
+    font-size: 1.4em;
+}
+
+main {
+    min-block-size: calc(100vh - 6em);
+}
+
+article {
+    background-color: rgb(55, 72, 87);
+}
+
+article, aside {
+    padding: var(--metric-box-spacing);
+    margin: var(--metric-box-spacing);
+}
+
+footer {
+    padding: calc(--metric-box-spacing)/ 2;
+    background-color: rgb(57, 154, 240);
+}
+
+
+/* @media (min-width: 45em) {
+    main {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+} */
+
+/**we can also use flex-box to achive same desgin.**/
+
+
+@media (min-width: 45em) {
+    main{
+        display: flex;
+        flex-direction: row;
+    }
+
+    main article {
+        flex: 3;
+    }
+
+    main aside {
+        flex: 2;
+    }
+}
